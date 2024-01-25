@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a1a"
+  },
+  "body": "** Milestone 1: Done **<br/>The first step in my blogging website project is done.<br/><br/>\r\nI was able to implement a Post/Feed functionality that allows you to write in one page and post it on another.<br/><br/>\r\nNext step is to create user profiles + authentication",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a1b"
+  },
+  "body": "** User Authentication using email and password is DONE **<br/>Registered users data are saved in a database <br/><br/>Upon login, the db is searched for the entered email and password<br/><br/>if there's a match the user is logged in.<br/><br/>Next up, Registration page + User profiles (requires session)",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a1c"
+  },
+  "body": "** Registration page done! **<br/>Just finished implementing a registration page.<br/><br/>It uses Regex to validate user input of username, email, and password.<br/><br/>User data is then inserted into the Users collection in the Blog database.<br/><br/>Next is implementing a 'session' mechanism that allows each user their own view of the website.<br/><br/><br/><br/>",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a1d"
+  },
+  "body": "** Session + some UI work done **<br/>Implemented a session mechanism that determines which user is sending requests.<br/><br/>Improved the UI look of the login page and fixing responsiveness of the app as a whole.<br/><br/>",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a1e"
+  },
+  "body": "** Fixed Line break problem **<br/>No more line breaks at the end of the message.<br/>Currently workking on improving the UI as a whole and fixing the responsiveness<br/>After that, creating user profiles, storing and displaying each message with user signature",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a1f"
+  },
+  "body": "** Working on profile **<br/>Finished the edit pfp and edit cover functionality...that took longer than expected.<br/>next will be adding a description <br/>later on, adding user posts to profile by making a new Collection 'posts' (I really miss working on the backend...)",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b0f768f0b4f57c25422a20"
+  },
+  "body": "** Description: Done **<br/>Adding/editing profile description is DONE.<br/>Next thing is:<br/>- Create collection for post.<br/>- export old posts - as they are - to mongoDB using pandas lib<br/>- Modify post data (remove title, add pfp, username, and date).<br/>- Add like and dislike buttons? maybe??<br/>- Add user posts to their profile.",
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 14:50:35"
+  },
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b1165c22857df54e3b6d25"
+  },
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 15:53:32"
+  },
+  "body": "** Modified posts in feed **<br/>- Added post header (pfp, username, date)<br/>- When user changes pfp, previous posts also update pfp<br/>> Next: add user own posts to profile",
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b1295c4c52ae9b6a8c560f"
+  },
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 17:14:36"
+  },
+  "body": "** ADD POSTS TO PROFILE: DONE **",
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b1635159b0804eba642ac5"
+  },
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-24 21:21:53"
+  },
+  "body": "** Main functionalities: Done **<br/>- I can proudly say that I finished the blog's main functions. Users now can:<br/>_Register Accounts.<br/>_Login.<br/>_Make posts with their attributes attached.<br/>_Have a profile and customize it.<br/><br/>Next: <br/>> users can delete/edit their previous posts through their profile (Gonna have to modify the posts collection).<br/>> validate the cover and profile pictures sizes so they don't break the UI.<br/>> test and discover bugs.",
+  "footer": {}
+},
+{
+  "_id": {
+    "$oid": "65b1ba3ddb5529b690729f87"
+  },
+  "header": {
+    "username": "web_overlord",
+    "date": "2024-01-25 03:32:45"
+  },
+  "body": "** ADDED DELETE POST FUNCTIONALITY **"
+}]

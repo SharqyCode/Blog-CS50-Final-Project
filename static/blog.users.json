@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "65aac55cdb990a89bc4a5e9c"
+  },
+  "email": "abc@xyz.com",
+  "hashPass": "5f4dcc3b5aa765d61d8327deb882cf99",
+  "username": "web_overlord",
+  "details": {
+    "cover_url": "./../static/user_uploads/cover/web_overlord@cover.jpg",
+    "description": "I am a web developer. Nice to meet you.",
+    "pfp_url": "./../static/user_uploads/pfp/web_overlord@pfp.jpg"
+  }
+},
+{
+  "_id": {
+    "$oid": "65ac7d2725fecf1512b5970f"
+  },
+  "username": "andr00",
+  "email": "andrew123@gmail.com",
+  "hashPass": "dedf44372dccd497e529f33689c09905",
+  "details": {
+    "pfp_url": "./../static/user_uploads/pfp/blank-profile-picture.webp",
+    "cover_url": null,
+    "description": null
+  }
+},
+{
+  "_id": {
+    "$oid": "65b261116c53be0162eea8a9"
+  },
+  "username": "zezoking",
+  "email": "zezo1234@gmail.com",
+  "hashPass": "70034e0dfb5efb466b56e5902efa77b2",
+  "details": {
+    "pfp_url": "./../static/user_uploads/pfp/zezoking@pfp.jpg",
+    "cover_url": "./../static/user_uploads/cover/zezoking@cover.png",
+    "description": "A passion for music."
+  }
+}]
