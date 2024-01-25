@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Blog | Login
+{% endblock %}
+
+{% block main%}
+<main class=" h-[calc(100vh-64px)]">
+    <div class="container mx-auto px-4">
+        <div class="text-purple-500 text-center text-3xl font-bold pt-20 tracking-wider">LOGIN</div>
+        <form class="mx-auto lg:mx-0 flex flex-col items-center font-sans mt-7" action="/login" method="POST">
+            <div class="relative">
+                <i class="fa-solid fa-at text-purple-500 absolute top-1/2 -translate-y-1/2 translate-x-[23px]"></i>
+                <input type="text" autocomplete="off" placeholder="Email" name="email"
+                    class="rounded-full focus:outline-none bg-violet-100 p-4 pl-16 placeholder:text-gray-500">
+            </div>
+            <div class="mt-5 relative">
+                <i class="fa-solid fa-lock text-purple-500 absolute top-1/2 -translate-y-1/2 translate-x-[23px]"></i>
+                <input type="password" placeholder="Password" name="password"
+                    class="rounded-full bg-violet-100 focus:outline-none p-4 pl-16 placeholder:text-gray-500">
+            </div>
+            <button type="submit"
+                class=" bg-gradient-to-br from-purple-500 to-pink-500 text-white mt-5 py-3 px-8 rounded-full">Login</button>
+            <div class="text-center mt-7 text-lg">
+                <span>Don't have an account?</span>
+                <a href="/register" class="text-purple-500">Register</a>
+            </div>
+            {% if error %}
+            {% autoescape false %}
+            <div class="mt-10 text-xl w-fit p-4 bg-pink-100 text-red-600 rounded-md">{{ error }}</div>
+            {% endautoescape %}
+            {% endif %}
+        </form>
+</main>
+</div>
+{% endblock %}

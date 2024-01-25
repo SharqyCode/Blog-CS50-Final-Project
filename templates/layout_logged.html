@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" type="text/css" href="./../static/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./../static/logo.png" type="image/png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body class="text-[rgb(10,35,66)]">
+    <nav class="w-full shadow-lg h-16 bg-gradient-to-b from-purple-500 to-pink-500 sticky top-0 z-50">
+        <div class="container mx-auto py-2 px-4 xl:pl-0 h-full flex items-center justify-between">
+            <a href="/" class="block h-[36px] aspect-square">
+                <img class="" src="./../static/logo.png" alt="">
+            </a>
+            <i id="mobile-menu-icon" class="fa-solid fa-bars text-white text-[30px] lg:hidden"></i>
+            <div class="text-white hidden lg:flex lg:items-center">
+                <a href="/feed" class="tab py-2 px-4 border-b-white">Feed</a>
+                <a href="/editor" class="tab py-2 px-4 border-b-white">Editor</a>
+                <a href="/profile" class="tab py-2 px-4 border-b-white"><img
+                        class="h-[40px] w-[40px] border-2 border-white rounded-full" src="{{ navPfp }}" alt=""></a>
+                <a href="/logout" class="tab py-2 px-4 border-b-white">Logout</a>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="w-full text-center sm:text-2xl text-white absolute left-0 top-full flex flex-col bg-gradient-to-b from-pink-500 to-pink-500 z-50 hidden">
+            <a href="/feed" class="p-4 border-b border-b-white">Feed</a>
+            <a href="/profile" class="p-4 border-b border-b-white flex items-center justify-center gap-4"><img
+                    class="h-[40px] w-[40px] border-2 border-white rounded-full" src="{{ navPfp }}" alt=""> Profile</a>
+            <a href="/editor" class="p-4 border-b border-b-white">Post</a>
+            <a href="/logout" class="p-4 ">Logout</a>
+        </div>
+    </nav>
+    {% block main %}
+    {% endblock %}
+    <script src="./../static/scripts/mobile_menu.js"></script>
+</body>
+
+</html>

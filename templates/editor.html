@@ -1,0 +1,28 @@
+{% extends 'layout_logged.html' %}
+
+{% block title %}
+Blog | Editor
+{% endblock %}
+
+{% block main %}
+<main class="bg-slate-300 h-[calc(100vh-64px)]">
+    <div class="container mx-auto px-4 pb-10 pt-10 lg:px-0">
+        <div
+            class="text-purple-500  w-fit p-4 mx-auto text-center text-3xl font-bold tracking-wider bg-white shadow-lg">
+            EDITOR</div>
+        <form action="/editor" method="POST" class="flex flex-col gap-5 items-center mx-auto mt-10 lg:w-[600px]">
+            <textarea placeholder="Place your thoughts here..." name="body" autocomplete="off"
+                class=" w-full resize-none h-[300px] bg-white rounded-lg p-4 focus:outline-none" autofocus></textarea>
+            <button type="submit"
+                class=" bg-gradient-to-br from-purple-500 to-pink-500 text-white mt-5 py-3 px-8 rounded-full">Submit</button>
+        </form>
+        {% if error %}
+        {% autoescape false %}
+        <div class="mt-10 mx-auto text-xl w-fit p-4 bg-yellow-100 text-orange-600 rounded-md">
+            {{
+            error }}</div>
+        {% endautoescape %}
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

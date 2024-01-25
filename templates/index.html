@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Blog
+{% endblock %}
+
+{% block main %}
+<main class=" h-[calc(100vh-64px)] bg-[url('./../static/home.webp')] bg-cover">
+    <div class="mx-auto w-fit pt-[100px] text-center px-4">
+        <h1 class="text-3xl font-bold tracking-wider bg-white p-4 shadow-lg">Welcome, Author!</h1>
+        <a href="/login"
+            class="block w-fit mx-auto text-2xl bg-gradient-to-br from-purple-500 to-pink-500 text-white mt-20 py-3 px-8 duration-300 rounded-full">
+            Start
+            <i class="fa-solid fa-pen-nib"></i>
+        </a>
+    </div>
+</main>
+{% endblock %}

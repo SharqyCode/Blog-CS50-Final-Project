@@ -1,0 +1,10 @@
+title,message
+Milestone 1: Done,"The first step in my blogging website project is done.<br/><br/>
+I was able to implement a Post/Feed functionality that allows you to write in one page and post it on another.<br/><br/>
+Next step is to create user profiles + authentication"
+User Authentication using email and password is DONE,"Registered users data are saved in a database <br/><br/>Upon login, the db is searched for the entered email and password<br/><br/>if there's a match the user is logged in.<br/><br/>Next up, Registration page + User profiles (requires session)"
+Registration page done!,"Just finished implementing a registration page.<br/><br/>It uses Regex to validate user input of username, email, and password.<br/><br/>User data is then inserted into the Users collection in the Blog database.<br/><br/>Next is implementing a 'session' mechanism that allows each user their own view of the website.<br/><br/><br/><br/>"
+Session + some UI work done,Implemented a session mechanism that determines which user is sending requests.<br/><br/>Improved the UI look of the login page and fixing responsiveness of the app as a whole.<br/><br/>
+Fixed Line break problem,"No more line breaks at the end of the message.<br/>Currently workking on improving the UI as a whole and fixing the responsiveness<br/>After that, creating user profiles, storing and displaying each message with user signature"
+Working on profile,"Finished the edit pfp and edit cover functionality...that took longer than expected.<br/>next will be adding a description <br/>later on, adding user posts to profile by making a new Collection 'posts' (I really miss working on the backend...)"
+Description: Done,"Adding/editing profile description is DONE.<br/>Next thing is:<br/>- Create collection for post.<br/>- export old posts - as they are - to mongoDB using pandas lib<br/>- Modify post data (remove title, add pfp, username, and date).<br/>- Add like and dislike buttons? maybe??<br/>- Add user posts to their profile."
