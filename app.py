@@ -143,10 +143,6 @@ def login():
         hashedPass = md5_hash.hexdigest()
 
         validUser = users.find_one({'email':email,'hashPass':hashedPass})
-        print(email)
-        print(password)
-        print(hashedPass)
-        print(validUser)
         if validUser:
             session['username'] = validUser["username"]
             return redirect(url_for('feed'))
