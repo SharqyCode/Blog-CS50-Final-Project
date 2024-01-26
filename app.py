@@ -2,7 +2,6 @@ import re
 import hashlib
 import os
 
-
 from flask import Flask, request, render_template, redirect, url_for, session
 from pymongo import MongoClient
 from functools import wraps
@@ -15,13 +14,11 @@ app.secret_key = 'b4ffc5b470c8b243452a9803b8b3d89a8e11c6127298dce8'
 app.config['UPLOAD_FOLDER'] = './static/user_uploads/'
 app.config['DEFAULT_PFP'] = './../static/user_uploads/pfp/blank-profile-picture.webp'
 
-
 # Connect to MongoDB
 client = MongoClient('mongodb://localhost:27017/')
 db = client['blog']
 users = db["users"]
 postsColl = db["posts"]
-
 
 def login_required(route_function):
     """
@@ -118,7 +115,6 @@ def register():
         users.insert_one({'username' : username, 'email' : email, 'hashPass' : hashedPass, 'details':{'pfp_url': app.config['DEFAULT_PFP'], 'cover_url': None, 'description': None}})
         return redirect(url_for('login'))
 
-
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == "GET":
@@ -183,9 +179,10 @@ def profile():
             pfpPath = pfpPath.replace('./', './../', 1)
             users.update_one({'username': username}, {'$set': {'details.pfp_url': pfpPath}})
         # User updated their description
-        description = request.form.get("description")
-        if description == None or len(description) <= 250:
-            users.update_one({'username': username}, {'$set': {'details.description': description}})
+        if 'description' in request.form:
+            description = request.form.get("description")
+            if description == None or len(description) <= 250:
+                users.update_one({'username': username}, {'$set': {'details.description': description}})
         return redirect(url_for('profile'))
 
 @app.route("/delete", methods=['POST'])
